@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link data-default-icon="https://static.cdninstagram.com/rsrc.php/v3/yb/r/lswP1OF1o6P.png" rel="icon" sizes="192x192" href="https://static.cdninstagram.com/rsrc.php/v3/yb/r/lswP1OF1o6P.png">
+        <title>Réplica - Instagram - Estudo</title>
+        <link rel="stylesheet" href="./assets/css/styles.css">
+    </head>
+    <body>
+        <main>
+            <section class="login">
+                <div class="images_cellphone">
+                    <div class="images_instagram_app">
+                        <img class="screen_image" id="screen_image_first" src="./assets/img/feed.png" alt="Instagram feed">
+                        <img class="screen_image"  src="./assets/img/chat.png" alt="Instagram chat">
+                        <img class="screen_image"  src="./assets/img/profile.png" alt="Instagram feed">
+                        <img class="screen_image"  src="./assets/img/stories.png" alt="Instagram feed">
+                    </div>
+                </div>
+                <div class="login_form_container">
+                    <div class="login_form">
+                        <div class="instagram_logo" aria-disabled="false" role="button" tabindex="0" style="cursor: pointer;">
+                            <i data-visualcompletion="css-img" aria-label="Instagram" class="" role="img" style="background-image: url(&quot;https://static.cdninstagram.com/rsrc.php/v3/y-/r/yXM3FgMdVNX.png&quot;); background-position: 0px -52px; background-size: auto; width: 175px; height: 51px; background-repeat: no-repeat; display: inline-block;"></i>
+                        </div>
+                        <form action="" method="post">
+                            <div class="inputs_form">
+                                <input type="text" placeholder="Telefone, nome de usuário ou email">
+                                <input type="text" placeholder="Senha">
+                                <button>Entrar</button>
+                                <div class="separator_container">
+                                    <div class="separator">
+                                    </div>
+                                    <div class="separator_ou">
+                                        Ou
+                                    </div>
+                                    <div class="separator">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="facebook_login">
+                                <img src="./assets/img/facebook_icon.png" alt="Logo facebook">
+                                <span class="facebook_name">Entrar com o Facebook</span>
+                            </button>
+                            <div class="forgot_password_container">
+                                <a href="" class="forgot_password">Esqueceu a senha?</a>   
+                            </div>
+                        </form>
+                    </div>    
+                    <div class="signup_link_container">
+                        <div class="signup_link_flex">
+                            <p>Não tem uma conta?<a href=""> Cadastre-se</a></p>
+                        </div>
+                    </div>
+                    <div class="app_link_container">
+                        <p>Obtenha o aplicativo.</p>
+                        <div class="stores_images">
+                            <img src="./assets/img/google_play.png" alt="Baixar da Google Play">
+                            <img src="./assets/img/microsoft.png" alt="Baixar da Microsoft">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="footer">
+                <div class="footer_links">
+                    <p>Meta</p>
+                    <p>Sobre</p>
+                    <p>Blog</p>
+                    <p>Carreiras</p>
+                    <p>Ajuda</p>
+                    <p>API</p>
+                    <p>Privacidade</p>
+                    <p>Termos</p>
+                    <p>Principais contas</p>
+                    <p>Localizações</p>
+                    <p>Instagram Lite</p>
+                    <p>Carregamento de contatos e não usuários</p>
+                </div>
+                <div class="footer_items">
+                    <p>Português (Brasil)</p>
+                    <p>© 2022 Instagram from Meta</p>
+                </div>
+            </section>
+        </footer>
+        <script>
+            var image_visible = 0;
+
+            function slideImages() {
+                array_of_images = Array.from(document.querySelectorAll(".screen_image"));
+
+                
+                    
+                array_of_images[image_visible].style.opacity = 0
+                array_of_images[image_visible].style.visibility = "hidden"
+                array_of_images[image_visible].style.transitionTimingFunction = "ease-in"
+
+
+                if (image_visible == (array_of_images.length - 1)) {
+                    array_of_images[0].style.visibility = "visible"
+                    array_of_images[0].style.opacity = 1
+                    array_of_images[0].style.transitionTimingFunction = "ease-out"
+                    image_visible = 0
+                }else{
+                    array_of_images[(image_visible+1)].style.visibility = "visible"
+                    array_of_images[(image_visible+1)].style.opacity = 1
+                    array_of_images[(image_visible+1)].style.transitionTimingFunction = "ease-out"
+                    image_visible++;
+                }    
+
+            }
+
+            setInterval(() => {
+                slideImages()
+            }, 4000);
+        </script>
+    </body>
+</html>
