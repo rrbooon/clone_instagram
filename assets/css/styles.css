@@ -279,3 +279,21 @@ footer{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0px 8px 12px 8px;
 }
+
+@media only screen and (max-width: 875px) {
+    .images_cellphone{
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .login_form, .signup_link_container{
+        margin: 0px;
+        background-color: rgb(250, 250, 250);
+        border: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: none;
+    }
+}
