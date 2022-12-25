@@ -150,7 +150,6 @@ main{
 
 .facebook_login img{
     max-height: 18px;
-
 }
 
 .facebook_name{
@@ -295,5 +294,9 @@ footer{
         display: flex;
         flex-direction: column;
         max-width: none;
+    }
+
+    .facebook_login{
+        background-color: rgb(250, 250, 250);
     }
 }
